@@ -22,10 +22,11 @@
     <script id="wonders-template" type="text/x-handlebars-template">
         {{#each wonders}}
             <div {{#if visited}}class="wonder visited" {{else}}class="wonder not-visited" {{/if}}>
-                <p class="name">{{name}} - {{location}}</p>
+                <p class="name"data-name="{{name}} ">{{name}} - {{location}}</p>
                 {{#unless visited}}
                     <p class=visit>Visit</p>
                 {{/unless}}
+                    <p class="delete">delete</p>
             </div>
         {{/each}}
     </script>
